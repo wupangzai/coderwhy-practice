@@ -1,8 +1,11 @@
 <template>
   <div>
     <h2>start</h2>
-    <slot>
-      <div>默认内容</div>
+    <slot name="slot1">
+      <div>默认内容1</div>
+    </slot>
+    <slot name="slot2">
+      <div>默认内容2</div>
     </slot>
     <h2>end</h2>
   </div>

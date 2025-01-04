@@ -1,7 +1,10 @@
 <template>
   <button @click="clickFn">clickFn</button>
   <slot2>
-    <button>slot内容</button>
+    <template v-slot:slot1> <div>插槽1内容</div></template>
+    <template v-slot:slot2>
+      <div>插槽2内容</div>
+    </template>
   </slot2>
 </template>
 
