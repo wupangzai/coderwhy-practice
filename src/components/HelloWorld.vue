@@ -1,10 +1,7 @@
 <template>
   <button @click="clickFn">clickFn</button>
-  <slot2>
-    <template v-slot:slot1> <div>插槽1内容</div></template>
-    <template v-slot:slot2>
-      <div>插槽2内容</div>
-    </template>
+  <slot2 :arry="arry" v-slot="slotProps">
+    <button>{{ slotProps.item }}</button>
   </slot2>
 </template>
 
@@ -28,6 +25,11 @@ export default {
     slot2,
   },
   name: "HelloWorld",
+  data() {
+    return {
+      arry: ["dingzhen", "xuebao "],
+    };
+  },
   props: {
     msg: {
       type: String,

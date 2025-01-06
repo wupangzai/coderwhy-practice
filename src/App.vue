@@ -1,10 +1,13 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld
-    msg="Welcome to Your Vue.js App"
-    extraProps="extraProps"
-    @click="listen"
-  />
+  <keep-alive>
+    <HelloWorld
+      msg="Welcome to Your Vue.js App"
+      extraProps="extraProps"
+      @click="listen"
+    />
+  </keep-alive>
+
   <button @click="click">click</button>
 </template>
 
