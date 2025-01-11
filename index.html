@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+
+  <script src="./renderer.js"></script>
+  <script>
+    //1、通过h函数返回一个vnode
+    const vnode = h("div", { class: "addtional-class" }, [
+      h("h2", null, "当前计数"),
+      h("button", null, "+1"),
+    ]);
+
+    //2、通过mount将vnode挂载到app中
+    mount(vnode, document.querySelector("#app"));
+
+    //3、创建新的vnode
+    const vnode1 = h("div", { class: "hahhaahha" }, "哈哈哈哈");
+
+    setTimeout(() => {
+      patch(vnode, vnode1);
+    }, 2000);
+  </script>
+</html>
